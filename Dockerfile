@@ -8,4 +8,7 @@ RUN apt-get -y install goofile theharvester lftp telnet && apt-get clean
 # Fix Metaspoit DB Issue
 RUN msfdb init
 
+# Fix Webspoit Module Issue
+RUN apt-get -y install python-scapy
+
 CMD ["/bin/bash"]
