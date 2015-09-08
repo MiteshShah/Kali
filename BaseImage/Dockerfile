@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update && apt-get -y dist-upgrade
 
 # Install Kali Linux Web Metapackage
-RUN apt-get -y install kali-linux-web
+RUN apt-get -y install kali-linux-web && apt-get clean
 
 # Set root user password
 RUN echo 'root:toor' | chpasswd
