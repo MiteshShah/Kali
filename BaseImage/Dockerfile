@@ -12,7 +12,6 @@ RUN apt-get -y update && apt-get -y dist-upgrade
 
 # Install Kali Linux Web Metapackage
 RUN apt-get -y install kali-linux-web
-RUN apt-get -y install kali-linux-wireless 
 RUN apt-get -y install kali-linux-top10 && apt-get clean
 
 # Fix Metaspoit DB Issue
