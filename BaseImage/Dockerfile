@@ -15,6 +15,12 @@ RUN apt-get -y install kali-linux-web
 RUN apt-get -y install kali-linux-wireless 
 RUN apt-get -y install kali-linux-top10 && apt-get clean
 
+# Fix Metaspoit DB Issue
+RUN msfdb init
+
+# Fix Webspoit Module Issue
+RUN apt-get -y install python-scapy
+
 # Set root user password
 RUN echo 'root:toor' | chpasswd
 
